@@ -7,10 +7,11 @@ class Cohort < ApplicationRecord
 
   def status
     if Date.today < start_date
-      "future"
+      'future'
     elsif Date.today > start_date && Date.today < graduation_date
-      "current"
-    else "graduated"
+      'current'
+    else
+      'graduated'
     end
   end
 end 
